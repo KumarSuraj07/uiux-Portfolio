@@ -192,22 +192,14 @@ const Projects = () => {
                     ))}
                   </div>
                   
-                  <div className="flex gap-2 justify-center">
+                  <div className="flex justify-center">
                     <motion.a
                       href={projects[currentProject].link}
                       whileHover={{ scale: 1.05 }}
                       className="flex items-center gap-1 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-2 rounded-lg text-xs font-medium"
                     >
                       <ExternalLink size={14} />
-                      <span>View</span>
-                    </motion.a>
-                    <motion.a
-                      href={projects[currentProject].github}
-                      whileHover={{ scale: 1.05 }}
-                      className="flex items-center gap-1 bg-gray-700/50 text-white px-4 py-2 rounded-lg text-xs font-medium border border-gray-600/50"
-                    >
-                      <Github size={14} />
-                      <span>Code</span>
+                      <span>View Project</span>
                     </motion.a>
                   </div>
                 </div>
@@ -264,15 +256,15 @@ const Projects = () => {
                       transition={{ delay: 0.2, duration: 0.6 }}
                     >
                       <div className="flex items-center gap-4 mb-6">
-                        <h3 className="text-4xl font-bold text-white">
+                        <h3 className="text-3xl font-bold text-white">
                           {projects[currentProject].title}
                         </h3>
-                        <span className="text-blue-400 text-lg font-medium bg-blue-500/20 px-4 py-2 rounded-full">
+                        <span className="text-blue-400 text-sm font-medium bg-blue-500/20 px-3 py-1 rounded-full">
                           {projects[currentProject].year}
                         </span>
                       </div>
                       
-                      <p className="text-gray-300/90 text-xl leading-relaxed mb-8">
+                      <p className="text-gray-300/90 text-base leading-relaxed mb-6">
                         {projects[currentProject].description}
                       </p>
                       
@@ -290,7 +282,7 @@ const Projects = () => {
                         ))}
                       </div>
                       
-                      <div className="flex gap-4">
+                      <div className="flex justify-center lg:justify-start">
                         <motion.a
                           href={projects[currentProject].link}
                           whileHover={{ scale: 1.05, y: -2 }}
@@ -299,15 +291,6 @@ const Projects = () => {
                         >
                           <ExternalLink size={20} />
                           <span>View Project</span>
-                        </motion.a>
-                        <motion.a
-                          href={projects[currentProject].github}
-                          whileHover={{ scale: 1.05, y: -2 }}
-                          whileTap={{ scale: 0.95 }}
-                          className="flex items-center gap-3 bg-gray-700/50 backdrop-blur-sm text-white px-8 py-4 rounded-xl hover:bg-gray-600/50 transition-all duration-300 text-lg font-medium border border-gray-600/50"
-                        >
-                          <Github size={20} />
-                          <span>Code</span>
                         </motion.a>
                       </div>
                     </motion.div>
