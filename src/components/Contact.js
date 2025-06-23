@@ -59,8 +59,8 @@ const Contact = () => {
           loop 
           muted 
           playsInline
-          src="https://videos.pexels.com/video-files/3129957/3129957-uhd_2560_1440_25fps.mp4"
-          className="w-full h-full object-cover opacity-30"
+          src="https://videos.pexels.com/video-files/3129902/3129902-uhd_2560_1440_25fps.mp4"
+          className="w-full h-full object-cover opacity-40"
         >
         </video>
       </div>

@@ -30,7 +30,7 @@ const Projects = () => {
       description: "A creative Nike website re-design project in Figma showcasing modern UI/UX practices, bold visuals, and an enhanced user experience.",
       image: "/image/nike.png",
       tags: ["Desktop", "UI/UX", "Figma"],
-      link: "#",
+      link: "https://www.figma.com/design/W6vy0et6oGUwimnmlx3JAm/Untitled?m=auto&t=cIMKAWrc7GtUOzqK-6",
       github: "#",
       year: "2024"
     },
@@ -40,7 +40,7 @@ const Projects = () => {
       description: "Creative campaign design with engaging visuals and brand storytelling",
       image: "/image/cocacola.png",
       tags: ["Campaign", "Branding", "Design"],
-      link: "#",
+      link: "https://www.figma.com/design/p8q5IV6l7mljLMFDnyHOV0/Untitled?m=auto&t=cIMKAWrc7GtUOzqK-6",
       github: "#",
       year: "2023"
     },
@@ -50,7 +50,7 @@ const Projects = () => {
       description: "Intuitive mobile app design for beverage ordering with smooth user experience",
       image: "/image/drinq.png",
       tags: ["Mobile", "App Design", "UX"],
-      link: "#",
+      link: "https://www.figma.com/design/Mj0sNnr9Tcv2TF3WupYzvD/Drinq?m=auto&t=cIMKAWrc7GtUOzqK-6",
       github: "#",
       year: "2024"
     }
@@ -75,19 +75,14 @@ const Projects = () => {
   };
 
   return (
-    <section ref={ref} className="relative pt-40 pb-10 px-6 overflow-hidden">
-      {/* Background video */}
+    <section ref={ref} className="relative pt-40 pb-10 px-6 overflow-hidden bg-black">
+      {/* Background Pattern */}
       <div className="absolute inset-0 w-full h-full">
-        <div className="absolute inset-0 bg-black opacity-15 z-10"></div>
-        <video 
-          autoPlay 
-          loop 
-          muted 
-          playsInline
-          src=""
-          className="w-full h-full object-cover opacity-25"
-        >
-        </video>
+        <div className="absolute inset-0 bg-gradient-to-br from-gray-900/30 via-black to-gray-900/30 z-10"></div>
+        <div className="absolute inset-0 opacity-10" style={{
+          backgroundImage: `radial-gradient(circle at 25% 25%, rgba(59, 130, 246, 0.1) 0%, transparent 50%),
+                           radial-gradient(circle at 75% 75%, rgba(147, 51, 234, 0.1) 0%, transparent 50%)`
+        }}></div>
       </div>
       <div className="relative z-30 w-full">
         <motion.div
@@ -154,7 +149,7 @@ const Projects = () => {
                 initial={{ opacity: 0, x: 100 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6, ease: "easeOut" }}
-                className="flex-1 bg-gray-900/30 backdrop-blur-lg rounded-2xl border border-gray-700/30 p-4 flex flex-col"
+                className="flex-1 bg-gray-800/50 backdrop-blur-lg rounded-2xl border border-gray-600/50 p-4 flex flex-col"
               >
                 <motion.div 
                   className="w-full h-48 rounded-xl overflow-hidden mb-4"
@@ -236,7 +231,7 @@ const Projects = () => {
                   initial={{ opacity: 0, scale: 0.8, rotateY: 90 }}
                   animate={{ opacity: 1, scale: 1, rotateY: 0 }}
                   transition={{ duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] }}
-                  className="w-full h-full bg-gray-900/20 backdrop-blur-lg rounded-3xl border border-gray-700/30 p-12 flex items-center gap-12"
+                  className="w-full h-full bg-gray-800/40 backdrop-blur-lg rounded-3xl border border-gray-600/50 p-12 flex items-center gap-12"
                 >
                   <motion.div 
                     whileHover={{ scale: 1.05, rotateY: 5 }}

@@ -53,19 +53,14 @@ const Achievements = () => {
   ];
 
   return (
-    <section ref={ref} className="relative py-20 px-6 overflow-hidden">
-      {/* Background video */}
+    <section ref={ref} className="relative py-20 px-6 overflow-hidden bg-black">
+      {/* Background Pattern */}
       <div className="absolute inset-0 w-full h-full">
-        <div className="absolute inset-0 bg-black opacity-75 z-10"></div>
-        <video 
-          autoPlay 
-          loop 
-          muted 
-          playsInline
-          src=""
-          className="w-full h-full object-cover opacity-20"
-        >
-        </video>
+        <div className="absolute inset-0 bg-gradient-to-br from-gray-900/30 via-black to-gray-900/30 z-10"></div>
+        <div className="absolute inset-0 opacity-10" style={{
+          backgroundImage: `radial-gradient(circle at 25% 25%, rgba(59, 130, 246, 0.1) 0%, transparent 50%),
+                           radial-gradient(circle at 75% 75%, rgba(147, 51, 234, 0.1) 0%, transparent 50%)`
+        }}></div>
       </div>
       
       <div className="relative z-20 max-w-6xl mx-auto">
@@ -180,7 +175,7 @@ const Achievements = () => {
                 {/* Achievement card */}
                 <motion.div 
                   whileHover={{ y: -8, scale: 1.02 }}
-                  className="bg-gray-900/10 backdrop-blur-sm rounded-3xl p-6 lg:p-8 border border-gray-700/20 hover:border-yellow-500/30 transition-all duration-500"
+                  className="bg-gray-800/30 backdrop-blur-sm rounded-3xl p-6 lg:p-8 border border-gray-600/40 hover:border-yellow-500/50 transition-all duration-500"
                 >
                   <div className="flex items-start gap-6">
                     <motion.div 

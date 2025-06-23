@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
-import { ChevronDown } from 'lucide-react';
+import { ChevronDown, Github } from 'lucide-react';
 
 const Hero = () => {
   const { scrollY } = useScroll();
@@ -16,7 +16,7 @@ const Hero = () => {
         style={{ y: y1, scale }}
         className="absolute inset-0 w-full h-full"
       >
-        <div className="absolute inset-0 bg-black opacity-20 z-10"></div>
+        <div className="absolute inset-0 bg-black opacity-30 z-10"></div>
         <video 
           autoPlay 
           loop 
@@ -49,16 +49,22 @@ const Hero = () => {
           A UI/UX Designer crafting digital experiences with precision and creativity
         </motion.p>
         
-        <motion.button
-          initial={{ opacity: 0, scale: 0.8 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.6, delay: 0.6 }}
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
-          className="bg-accent text-white px-8 py-4 rounded-full font-medium hover:bg-opacity-90 transition-all duration-300 shadow-lg"
-        >
-          View My Work
-        </motion.button>
+        <div className="flex justify-center">
+          <motion.a
+            href="https://github.com/KumarSuraj07"
+            target="_blank"
+            rel="noopener noreferrer"
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.6, delay: 0.6 }}
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            className="bg-gray-900/80 backdrop-blur-sm border border-gray-600/70 text-white px-6 py-3 rounded-full font-medium hover:bg-gray-800/80 hover:border-gray-500/70 transition-all duration-300 shadow-lg flex items-center gap-2"
+          >
+            <Github size={18} />
+            <span>Dev Side of Me</span>
+          </motion.a>
+        </div>
       </div>
       
       {/* Scroll indicator */}
